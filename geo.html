@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+	<title>geo localizacion</title>
+<script type="text/javascript">
+function loadLocation () {
+	//inicializamos la funcion y definimos  el tiempo maximo ,las funciones de error y exito.
+	navigator.geolocation.getCurrentPosition(viewMap,ViewError,{timeout:1000});
+}
+
+//Funcion de exito
+function viewMap (position) {
+	
+	var lon = position.coords.longitude;	//guardamos la longitud
+	var lat = position.coords.latitude;		//guardamos la latitud
+
+	var link = "http://maps.google.com/?ll="+lat+","+lon+"&z=14";
+	document.getElementById("long").innerHTML = "Longitud: "+lon;
+	document.getElementById("latitud").innerHTML = "Latitud: "+lat;
+
+	document.getElementById("link").href = link;
+
+}
+
+
+
+function ViewError (error) {
+	alert(error.code);
+}	
+
+
+
+	</script>
+	
+</head>
+<body onload="loadLocation();">
+<label id="long"></label> <br/>
+<label id="latitud"></label> <br/>
+<a id="link" target="_blank">Enlace al mapa</a>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5680373324467!2d-76.95068405025553!3d-12.073213991407691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x59105c6e435a93c41%3A0xcdaaa71f277efd64!2sISIL+La+Molina!5e0!3m2!1ses-419!2spe!4v1506603309546" width="100%" height="420"  frameborder="1" style="border:solid 1px 
+  	#000000 ; position: relative" allowfullscreen></iframe>
+
+</body>
+</html>

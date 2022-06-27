@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+#activaventana{
+	display: none;
+}
+
+#abremodal{
+	display: block;
+	width: 250px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: rgba(18,192,97,1.00);
+	color: white;
+	font-family: arial;
+	font-size: 1.2em;
+	font-weight: bolder;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.ventmodal{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: -100%;
+	left: 0px;
+	background-color: rgba(0,0,0,.6);
+	-webkit-transition: all 1s;
+}
+#activaventana:checked ~ .ventmodal{
+	top: 0%;
+}
+
+
+#cierramodal{
+	display: block;
+	color: white;
+	font-size: 2em;
+	background-color: #BF1315;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 1030px;
+	margin-top: 50px;
+	cursor: pointer;
+}
+
+.contenido{
+	width: 500px;
+	height: 500px;
+	background-color: coral;
+	color: white;
+	font-size: 1.2em;
+	padding: 10px;
+	margin: 5px auto;
+}
+

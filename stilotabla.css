@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+img{
+	width: 120px;
+	height: 80px;
+}
+
+.tabla{
+	width: 70%;
+	border: 2px solid;
+	margin-top: 50px;
+	margin-left: 180px;
+
+}
+
+caption{
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	font-family: verdana;
+}
+
+.tabla th{
+	background-color: #F10609;
+	color: #fff;
+	font-size: 20px;
+}
+
+.tabla,th,td{
+	border: 1px solid rgba(155,153,153,1.00);
+	border-collapse: collapse;
+	font-family: arial;
+	font-weight: bold;
+}
+
+th,td{
+	padding: 10px;
+	text-align: center;
+}
+
+
+.tabla tr:hover{
+	
+	background: #E5E7E9;
+}
+
+.tabla td:hover{
+	background:rgba(143,137,137,1.00);
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
